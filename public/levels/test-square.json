@@ -1,0 +1,64 @@
+{
+  "id": "test-square",
+  "name": "Test Square",
+  "gridType": "square",
+  "gridSize": { "width": 15, "height": 15 },
+  "timeLimit": 120,
+  "snake": {
+    "startPosition": { "x": 2, "y": 7 },
+    "startDirection": "right",
+    "startOnBackSide": false,
+    "initialLength": 6,
+    "testPath": [
+      { "x": 2, "y": 7, "backSide": false },
+      { "x": 3, "y": 7, "backSide": false },
+      { "x": 4, "y": 7, "backSide": false },
+      { "x": 5, "y": 7, "backSide": false },
+      { "x": 6, "y": 7, "backSide": false },
+      { "x": 6, "y": 8, "backSide": false },
+      { "x": 6, "y": 9, "backSide": false },
+      { "x": 6, "y": 10, "backSide": false },
+      { "x": 6, "y": 11, "backSide": false },
+      { "x": 6, "y": 12, "backSide": false },
+      { "x": 6, "y": 13, "backSide": false },
+      { "x": 6, "y": 14, "backSide": false },
+      { "x": 6, "y": 14, "backSide": true },
+      { "x": 7, "y": 14, "backSide": true },
+      { "x": 8, "y": 14, "backSide": true },
+      { "x": 8, "y": 13, "backSide": true },
+      { "x": 8, "y": 12, "backSide": true },
+      { "x": 8, "y": 11, "backSide": true },
+      { "x": 8, "y": 10, "backSide": true },
+      { "x": 9, "y": 10, "backSide": true },
+      { "x": 10, "y": 10, "backSide": true },
+      { "x": 11, "y": 10, "backSide": true },
+      { "x": 12, "y": 10, "backSide": true },
+      { "x": 13, "y": 10, "backSide": true },
+      { "x": 14, "y": 10, "backSide": true },
+      { "x": 14, "y": 10, "backSide": false },
+      { "x": 14, "y": 9, "backSide": false },
+      { "x": 14, "y": 8, "backSide": false },
+      { "x": 13, "y": 8, "backSide": false },
+      { "x": 12, "y": 8, "backSide": false },
+      { "x": 11, "y": 8, "backSide": false }
+    ]
+  },
+  "elements": {
+    "front": {
+      "obstacles": [
+        { "type": "hole", "x": 7, "y": 7 },
+        { "type": "hole", "x": 3, "y": 3 },
+        { "type": "hole", "x": 11, "y": 11 }
+      ],
+      "pickups": [],
+      "powerPaths": [],
+      "seekers": []
+    },
+    "back": {
+      "obstacles": [],
+      "pickups": [],
+      "powerPaths": [],
+      "seekers": []
+    }
+  }
+}

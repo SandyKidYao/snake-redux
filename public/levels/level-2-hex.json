@@ -1,0 +1,115 @@
+{
+  "id": "level-2-hex",
+  "name": "Hexagonal Grid",
+  "gridType": "hexagonal",
+  "gridSize": { "width": 12, "height": 10 },
+  "timeLimit": 90,
+  "snake": {
+    "startPosition": { "x": 6, "y": 5 },
+    "startDirection": "right",
+    "startOnBackSide": false,
+    "initialLength": 6
+  },
+  "elements": {
+    "front": {
+      "obstacles": [
+        { "type": "hole", "x": 2, "y": 2 },
+        { "type": "hole", "x": 9, "y": 2 },
+        { "type": "hole", "x": 2, "y": 7 },
+        { "type": "hole", "x": 9, "y": 7 },
+        { "type": "hole", "x": 4, "y": 2 },
+        { "type": "hole", "x": 8, "y": 7 },
+        { "type": "solid_wall", "x": 3, "y": 3 },
+        { "type": "solid_wall", "x": 8, "y": 3 },
+        { "type": "solid_wall", "x": 3, "y": 6 },
+        { "type": "solid_wall", "x": 8, "y": 6 },
+        { "type": "solid_wall", "x": 2, "y": 4 },
+        { "type": "breakable_wall", "x": 5, "y": 3 },
+        { "type": "breakable_wall", "x": 6, "y": 3 },
+        { "type": "breakable_wall", "x": 5, "y": 6 },
+        { "type": "breakable_wall", "x": 6, "y": 6 }
+      ],
+      "pickups": [
+        { "type": "food", "x": 1, "y": 3 },
+        { "type": "food", "x": 10, "y": 3 },
+        { "type": "food", "x": 1, "y": 5 },
+        { "type": "food", "x": 10, "y": 5 },
+        { "type": "food", "x": 1, "y": 7 },
+        { "type": "food", "x": 10, "y": 7 },
+        { "type": "food", "x": 4, "y": 4 },
+        { "type": "food", "x": 7, "y": 4 },
+        { "type": "food", "x": 4, "y": 5 },
+        { "type": "energy", "x": 3, "y": 2 },
+        { "type": "shield", "x": 9, "y": 7 },
+        { "type": "teleport", "x": 3, "y": 7 },
+        { "type": "extra_life", "x": 9, "y": 2 },
+        { "type": "letter", "x": 1, "y": 1, "letter": "N" },
+        { "type": "letter", "x": 10, "y": 1, "letter": "G" },
+        { "type": "letter", "x": 6, "y": 1, "letter": "A" },
+        { "type": "letter", "x": 1, "y": 8, "letter": "G" },
+        { "type": "letter", "x": 10, "y": 8, "letter": "E" }
+      ],
+      "powerPaths": [
+        {
+          "cells": [
+            { "x": 2, "y": 5 },
+            { "x": 3, "y": 5 },
+            { "x": 4, "y": 5 },
+            { "x": 5, "y": 5 },
+            { "x": 6, "y": 5 },
+            { "x": 7, "y": 5 },
+            { "x": 8, "y": 5 },
+            { "x": 9, "y": 5 }
+          ]
+        }
+      ],
+      "seekers": [
+        { "type": "pickup_stealer", "x": 6, "y": 7 }
+      ]
+    },
+    "back": {
+      "obstacles": [
+        { "type": "breakable_wall", "x": 4, "y": 4 },
+        { "type": "breakable_wall", "x": 7, "y": 4 },
+        { "type": "breakable_wall", "x": 4, "y": 6 },
+        { "type": "breakable_wall", "x": 7, "y": 6 },
+        { "type": "breakable_wall", "x": 5, "y": 3 },
+        { "type": "breakable_wall", "x": 6, "y": 7 },
+        { "type": "solid_wall", "x": 3, "y": 4 },
+        { "type": "solid_wall", "x": 8, "y": 5 }
+      ],
+      "pickups": [
+        { "type": "food", "x": 2, "y": 3 },
+        { "type": "food", "x": 9, "y": 3 },
+        { "type": "food", "x": 2, "y": 5 },
+        { "type": "food", "x": 9, "y": 5 },
+        { "type": "food", "x": 2, "y": 7 },
+        { "type": "food", "x": 9, "y": 7 },
+        { "type": "food", "x": 5, "y": 4 },
+        { "type": "energy", "x": 3, "y": 7 },
+        { "type": "shield", "x": 8, "y": 3 },
+        { "type": "teleport", "x": 6, "y": 2 },
+        { "type": "extra_life", "x": 6, "y": 8 },
+        { "type": "letter", "x": 2, "y": 2, "letter": "S" },
+        { "type": "letter", "x": 9, "y": 2, "letter": "N" },
+        { "type": "letter", "x": 6, "y": 5, "letter": "A" },
+        { "type": "letter", "x": 2, "y": 8, "letter": "K" },
+        { "type": "letter", "x": 9, "y": 8, "letter": "E" },
+        { "type": "letter", "x": 6, "y": 3, "letter": "S" }
+      ],
+      "powerPaths": [
+        {
+          "cells": [
+            { "x": 6, "y": 2 },
+            { "x": 6, "y": 3 },
+            { "x": 6, "y": 4 },
+            { "x": 6, "y": 5 },
+            { "x": 6, "y": 6 },
+            { "x": 6, "y": 7 }
+          ]
+        }
+      ],
+      "seekers": []
+    }
+  }
+}

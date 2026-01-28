@@ -1,0 +1,49 @@
+{
+  "id": "test-hex",
+  "name": "Test Hex",
+  "gridType": "hexagonal",
+  "gridSize": { "width": 12, "height": 10 },
+  "timeLimit": 120,
+  "snake": {
+    "startPosition": { "x": 2, "y": 5 },
+    "startDirection": "right",
+    "startOnBackSide": false,
+    "initialLength": 6,
+    "testPath": [
+      { "x": 2, "y": 5, "backSide": false },
+      { "x": 3, "y": 5, "backSide": false },
+      { "x": 4, "y": 5, "backSide": false },
+      { "x": 5, "y": 5, "backSide": false },
+      { "x": 5, "y": 6, "backSide": false },
+      { "x": 6, "y": 7, "backSide": false },
+      { "x": 6, "y": 8, "backSide": false },
+      { "x": 7, "y": 9, "backSide": false },
+      { "x": 7, "y": 9, "backSide": true },
+      { "x": 8, "y": 9, "backSide": true },
+      { "x": 9, "y": 9, "backSide": true },
+      { "x": 9, "y": 8, "backSide": true },
+      { "x": 9, "y": 7, "backSide": true },
+      { "x": 9, "y": 6, "backSide": true },
+      { "x": 10, "y": 6, "backSide": true },
+      { "x": 11, "y": 6, "backSide": true }
+    ]
+  },
+  "elements": {
+    "front": {
+      "obstacles": [
+        { "type": "hole", "x": 6, "y": 5 },
+        { "type": "hole", "x": 3, "y": 3 },
+        { "type": "hole", "x": 8, "y": 7 }
+      ],
+      "pickups": [],
+      "powerPaths": [],
+      "seekers": []
+    },
+    "back": {
+      "obstacles": [],
+      "pickups": [],
+      "powerPaths": [],
+      "seekers": []
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "id": "level-1-square",
+  "name": "Square Grid",
+  "gridType": "square",
+  "gridSize": { "width": 15, "height": 15 },
+  "timeLimit": 60,
+  "snake": {
+    "startPosition": { "x": 7, "y": 7 },
+    "startDirection": "right",
+    "startOnBackSide": false,
+    "initialLength": 6
+  },
+  "elements": {
+    "front": {
+      "obstacles": [
+        { "type": "hole", "x": 2, "y": 2 },
+        { "type": "hole", "x": 12, "y": 2 },
+        { "type": "hole", "x": 2, "y": 12 },
+        { "type": "hole", "x": 12, "y": 12 },
+        { "type": "hole", "x": 5, "y": 2 },
+        { "type": "hole", "x": 9, "y": 12 },
+        { "type": "solid_wall", "x": 4, "y": 4 },
+        { "type": "solid_wall", "x": 10, "y": 4 },
+        { "type": "solid_wall", "x": 4, "y": 10 },
+        { "type": "solid_wall", "x": 10, "y": 10 },
+        { "type": "solid_wall", "x": 3, "y": 6 },
+        { "type": "solid_wall", "x": 11, "y": 6 },
+        { "type": "solid_wall", "x": 3, "y": 8 },
+        { "type": "solid_wall", "x": 11, "y": 8 },
+        { "type": "breakable_wall", "x": 6, "y": 3 },
+        { "type": "breakable_wall", "x": 8, "y": 3 },
+        { "type": "breakable_wall", "x": 6, "y": 11 },
+        { "type": "breakable_wall", "x": 8, "y": 11 },
+        { "type": "breakable_wall", "x": 2, "y": 5 },
+        { "type": "breakable_wall", "x": 12, "y": 5 },
+        { "type": "breakable_wall", "x": 2, "y": 9 }
+      ],
+      "pickups": [
+        { "type": "food", "x": 1, "y": 3 },
+        { "type": "food", "x": 13, "y": 3 },
+        { "type": "food", "x": 1, "y": 5 },
+        { "type": "food", "x": 13, "y": 5 },
+        { "type": "food", "x": 1, "y": 7 },
+        { "type": "food", "x": 13, "y": 7 },
+        { "type": "food", "x": 1, "y": 9 },
+        { "type": "food", "x": 13, "y": 9 },
+        { "type": "food", "x": 1, "y": 11 },
+        { "type": "food", "x": 13, "y": 11 },
+        { "type": "food", "x": 5, "y": 5 },
+        { "type": "food", "x": 9, "y": 5 },
+        { "type": "food", "x": 5, "y": 9 },
+        { "type": "food", "x": 9, "y": 9 },
+        { "type": "food", "x": 7, "y": 3 },
+        { "type": "food", "x": 7, "y": 11 },
+        { "type": "food", "x": 3, "y": 13 },
+        { "type": "food", "x": 11, "y": 13 },
+        { "type": "energy", "x": 3, "y": 3 },
+        { "type": "shield", "x": 11, "y": 11 },
+        { "type": "teleport", "x": 3, "y": 11 },
+        { "type": "extra_life", "x": 11, "y": 3 },
+        { "type": "letter", "x": 1, "y": 1, "letter": "N" },
+        { "type": "letter", "x": 13, "y": 1, "letter": "G" },
+        { "type": "letter", "x": 7, "y": 1, "letter": "A" },
+        { "type": "letter", "x": 1, "y": 13, "letter": "G" },
+        { "type": "letter", "x": 13, "y": 13, "letter": "E" }
+      ],
+      "powerPaths": [
+        {
+          "cells": [
+            { "x": 2, "y": 7 },
+            { "x": 3, "y": 7 },
+            { "x": 4, "y": 7 },
+            { "x": 5, "y": 7 },
+            { "x": 6, "y": 7 },
+            { "x": 7, "y": 7 },
+            { "x": 8, "y": 7 },
+            { "x": 9, "y": 7 },
+            { "x": 10, "y": 7 },
+            { "x": 11, "y": 7 },
+            { "x": 12, "y": 7 }
+          ]
+        }
+      ],
+      "seekers": [
+        { "type": "pickup_stealer", "x": 7, "y": 9 }
+      ]
+    },
+    "back": {
+      "obstacles": [
+        { "type": "breakable_wall", "x": 5, "y": 5 },
+        { "type": "breakable_wall", "x": 9, "y": 5 },
+        { "type": "breakable_wall", "x": 5, "y": 9 },
+        { "type": "breakable_wall", "x": 9, "y": 9 },
+        { "type": "breakable_wall", "x": 4, "y": 6 },
+        { "type": "breakable_wall", "x": 10, "y": 6 },
+        { "type": "breakable_wall", "x": 4, "y": 8 },
+        { "type": "breakable_wall", "x": 10, "y": 8 },
+        { "type": "breakable_wall", "x": 6, "y": 4 },
+        { "type": "breakable_wall", "x": 8, "y": 4 },
+        { "type": "breakable_wall", "x": 6, "y": 10 },
+        { "type": "solid_wall", "x": 3, "y": 5 },
+        { "type": "solid_wall", "x": 11, "y": 5 },
+        { "type": "solid_wall", "x": 3, "y": 9 },
+        { "type": "solid_wall", "x": 11, "y": 9 }
+      ],
+      "pickups": [
+        { "type": "food", "x": 2, "y": 4 },
+        { "type": "food", "x": 12, "y": 4 },
+        { "type": "food", "x": 2, "y": 6 },
+        { "type": "food", "x": 12, "y": 6 },
+        { "type": "food", "x": 2, "y": 8 },
+        { "type": "food", "x": 12, "y": 8 },
+        { "type": "food", "x": 2, "y": 10 },
+        { "type": "food", "x": 12, "y": 10 },
+        { "type": "food", "x": 5, "y": 3 },
+        { "type": "food", "x": 9, "y": 3 },
+        { "type": "food", "x": 5, "y": 11 },
+        { "type": "food", "x": 9, "y": 11 },
+        { "type": "food", "x": 6, "y": 6 },
+        { "type": "food", "x": 8, "y": 8 },
+        { "type": "energy", "x": 4, "y": 10 },
+        { "type": "shield", "x": 10, "y": 4 },
+        { "type": "teleport", "x": 7, "y": 3 },
+        { "type": "extra_life", "x": 7, "y": 11 },
+        { "type": "letter", "x": 3, "y": 3, "letter": "S" },
+        { "type": "letter", "x": 11, "y": 3, "letter": "N" },
+        { "type": "letter", "x": 7, "y": 7, "letter": "A" },
+        { "type": "letter", "x": 3, "y": 11, "letter": "K" },
+        { "type": "letter", "x": 11, "y": 11, "letter": "E" },
+        { "type": "letter", "x": 7, "y": 5, "letter": "S" }
+      ],
+      "powerPaths": [
+        {
+          "cells": [
+            { "x": 7, "y": 2 },
+            { "x": 7, "y": 3 },
+            { "x": 7, "y": 4 },
+            { "x": 7, "y": 5 },
+            { "x": 7, "y": 6 },
+            { "x": 7, "y": 7 },
+            { "x": 7, "y": 8 },
+            { "x": 7, "y": 9 },
+            { "x": 7, "y": 10 },
+            { "x": 7, "y": 11 },
+            { "x": 7, "y": 12 }
+          ]
+        }
+      ],
+      "seekers": []
+    }
+  }
+}
