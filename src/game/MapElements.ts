@@ -525,7 +525,6 @@ export class Seeker implements MapElement {
   mesh: THREE.Group
 
   // TODO: Seeker AI not yet implemented
-  //   (placeholder fields removed: targetX, targetY, moveSpeed)
 
   constructor(seekerType: SeekerType, gridX: number, gridY: number, worldPos: THREE.Vector3) {
     this.type = 'seeker'

@@ -75,8 +75,6 @@ export class SquareGrid extends Grid {
   }
 
   private getCellColor(cell: GridCell): { top: number; side: number; edge: number } {
-    // centerX/centerY/distX/distY were used for hue variation (removed — colors are now hardcoded hex)
-
     switch (cell.type) {
       case CellType.SPEED_UP:
         // Green cells

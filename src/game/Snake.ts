@@ -582,8 +582,6 @@ export class Snake {
     this.mesh.add(snakeGroup)
   }
 
-  // DEBUG: _buildDebugCurves() removed (dead code — call site was commented out)
-
   // Add glowing edge lines
   private addEdgeLines(
     group: THREE.Group,
