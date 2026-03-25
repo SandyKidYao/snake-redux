@@ -524,17 +524,14 @@ export class Seeker implements MapElement {
   gridY: number
   mesh: THREE.Group
 
-  private targetX: number
-  private targetY: number
-  private moveSpeed: number = 2
+  // TODO: Seeker AI not yet implemented
+  //   (placeholder fields removed: targetX, targetY, moveSpeed)
 
   constructor(seekerType: SeekerType, gridX: number, gridY: number, worldPos: THREE.Vector3) {
     this.type = 'seeker'
     this.seekerType = seekerType
     this.gridX = gridX
     this.gridY = gridY
-    this.targetX = gridX
-    this.targetY = gridY
     this.mesh = this.createMesh(worldPos)
   }
 

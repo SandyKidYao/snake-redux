@@ -31,7 +31,7 @@ export function getLevels(): LevelConfig[] {
 export const LEVELS: LevelConfig[] = new Proxy([] as LevelConfig[], {
   get(_target, prop) {
     const levels = LevelLoader.getInstance().getLevelConfigs()
-    const value = (levels as Record<string | symbol, unknown>)[prop]
+    const value = (levels as unknown as Record<string | symbol, unknown>)[prop]
     // Bind array methods to the actual levels array
     if (typeof value === 'function') {
       return (value as Function).bind(levels)

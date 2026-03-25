@@ -582,53 +582,7 @@ export class Snake {
     this.mesh.add(snakeGroup)
   }
 
-  // Draw debug curves to visualize the four splines
-  private buildDebugCurves(): void {
-    if (!this.centerCurve || !this.leftCurve || !this.rightCurve || !this.apexCurve) return
-
-    const debugGroup = new THREE.Group()
-    const sampleCount = 100
-
-    // Center curve - yellow
-    const centerPoints = this.centerCurve.getPoints(sampleCount)
-    const centerGeometry = new THREE.BufferGeometry().setFromPoints(centerPoints)
-    const centerMaterial = new THREE.LineBasicMaterial({ color: 0xffff00, linewidth: 2 })
-    debugGroup.add(new THREE.Line(centerGeometry, centerMaterial))
-
-    // Left curve - red
-    const leftPoints = this.leftCurve.getPoints(sampleCount)
-    const leftGeometry = new THREE.BufferGeometry().setFromPoints(leftPoints)
-    const leftMaterial = new THREE.LineBasicMaterial({ color: 0xff0000, linewidth: 2 })
-    debugGroup.add(new THREE.Line(leftGeometry, leftMaterial))
-
-    // Right curve - blue
-    const rightPoints = this.rightCurve.getPoints(sampleCount)
-    const rightGeometry = new THREE.BufferGeometry().setFromPoints(rightPoints)
-    const rightMaterial = new THREE.LineBasicMaterial({ color: 0x0088ff, linewidth: 2 })
-    debugGroup.add(new THREE.Line(rightGeometry, rightMaterial))
-
-    // Apex curve - green
-    const apexPoints = this.apexCurve.getPoints(sampleCount)
-    const apexGeometry = new THREE.BufferGeometry().setFromPoints(apexPoints)
-    const apexMaterial = new THREE.LineBasicMaterial({ color: 0x00ff00, linewidth: 2 })
-    debugGroup.add(new THREE.Line(apexGeometry, apexMaterial))
-
-    // Draw spheres at control points for center curve
-    const sphereGeometry = new THREE.SphereGeometry(0.05, 8, 8)
-    const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff })
-    for (let i = 0; i < this.pathPointsWithSide.length; i++) {
-      const point = this.pathPointsWithSide[i]
-      const worldPos = this.grid.gridToWorld(point.x, point.y)
-      const baseY = point.backSide ? -this.floorOffset : this.floorOffset
-      const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial.clone())
-      sphere.position.set(worldPos.x, baseY, worldPos.z)
-      // Color based on side: green for front, magenta for back
-      ;(sphere.material as THREE.MeshBasicMaterial).color.setHex(point.backSide ? 0xff00ff : 0x00ff00)
-      debugGroup.add(sphere)
-    }
-
-    this.mesh.add(debugGroup)
-  }
+  // DEBUG: _buildDebugCurves() removed (dead code — call site was commented out)
 
   // Add glowing edge lines
   private addEdgeLines(
