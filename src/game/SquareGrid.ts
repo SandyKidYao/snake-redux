@@ -75,13 +75,6 @@ export class SquareGrid extends Grid {
   }
 
   private getCellColor(cell: GridCell): { top: number; side: number; edge: number } {
-    const centerX = this.width / 2
-    const centerY = this.height / 2
-
-    // Distance from center for gradient effect
-    const distX = (cell.x - centerX) / centerX
-    const distY = (cell.y - centerY) / centerY
-
     switch (cell.type) {
       case CellType.SPEED_UP:
         // Green cells
@@ -98,10 +91,7 @@ export class SquareGrid extends Grid {
           edge: 0xff4488,
         }
       default:
-        // Normal cells - cyan/teal with position-based variation
-        const baseHue = 180 // Cyan
-        const hueVariation = distX * 20 + distY * 10
-
+        // Normal cells - cyan/teal with position-based variation (hardcoded hex)
         // Create color variation based on position
         if ((cell.x + cell.y) % 5 === 0) {
           // Some cells slightly different shade

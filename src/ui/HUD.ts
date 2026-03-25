@@ -8,9 +8,7 @@ export class HUD {
   private timeElement: HTMLElement | null = null
   private multiplierElement: HTMLElement | null = null
 
-  private timeRemaining: number = 0
   private timeLimit: number = 0
-  private multiplier: number = 1
 
   constructor(container: HTMLElement) {
     this.container = container
@@ -193,8 +191,6 @@ export class HUD {
   updateTime(elapsed: number): void {
     if (this.timeElement) {
       const remaining = Math.max(0, this.timeLimit - elapsed)
-      this.timeRemaining = remaining
-
       const minutes = Math.floor(remaining / 60)
       const seconds = Math.floor(remaining % 60)
       this.timeElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
@@ -221,7 +217,6 @@ export class HUD {
   }
 
   setMultiplier(multiplier: number): void {
-    this.multiplier = multiplier
     if (this.multiplierElement) {
       this.multiplierElement.textContent = `x${multiplier}`
     }

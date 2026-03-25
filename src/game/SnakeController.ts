@@ -260,7 +260,7 @@ export class SnakeController {
 
       // Check bounds - if out of bounds, flip to other side
       if (!this.isValidPosition(nextPos.x, nextPos.y)) {
-        this.handleBoundaryFlip(nextPos)
+        this.handleBoundaryFlip()
       }
       // Check for hole - if it's a hole, flip to other side
       else if (this.isHole(nextPos.x, nextPos.y)) {
@@ -302,7 +302,7 @@ export class SnakeController {
    * When snake hits edge, it wraps around the edge to the other side
    * Direction is reversed so snake continues in opposite direction
    */
-  private handleBoundaryFlip(nextPos: { x: number; y: number }): void {
+  private handleBoundaryFlip(): void {
     const head = this.segments[0]
 
     // Flip to the other side
